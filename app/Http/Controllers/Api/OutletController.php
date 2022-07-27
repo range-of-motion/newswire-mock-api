@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Actions\GenerateOutletModelAction;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class OutletController extends Controller

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Actions\GenerateArticleModelAction;
 use App\Actions\GenerateOutletModelAction;
 use App\Actions\GeneratePersonModelAction;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
