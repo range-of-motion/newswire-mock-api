@@ -3,6 +3,10 @@
 use App\Http\Controllers\Api\ArticleController;
 use App\Http\Controllers\Api\OutletController;
 use App\Http\Controllers\Api\PersonController;
+use App\Http\Controllers\Api\PopularMediaTypeController;
+use App\Http\Controllers\Api\PopularOutletController;
+use App\Http\Controllers\Api\PopularRoleController;
+use App\Http\Controllers\Api\PopularTopicController;
 use App\Http\Controllers\Api\SearchController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +33,8 @@ Route::get('/people/{id}', [PersonController::class, 'show']);
 Route::get('/articles/{id}', [ArticleController::class, 'show']);
 
 Route::get('/outlets/{id}', [OutletController::class, 'show']);
+
+Route::get('/popular-media-types', [PopularMediaTypeController::class, 'index']);
+Route::get('/popular-outlets', [PopularOutletController::class, 'index']);
+Route::get('/popular-roles', [PopularRoleController::class, 'index']);
+Route::get('/popular-topics', [PopularTopicController::class, 'index']);
