@@ -13,7 +13,7 @@ return [
         'beats' => [],
     ], [
         'name' => 'Rebecca Ramsey',
-        'position' => 'Editor, TIme',
+        'position' => 'Editor, Time',
         'location' => 'Michigan, USA',
         'beats' => [],
     ], [
