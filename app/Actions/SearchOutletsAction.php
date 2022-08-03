@@ -19,9 +19,7 @@ class SearchOutletsAction
                 $doesNameMatch = strpos(strtolower($outlet['name']), strtolower($query)) !== false;
                 $doesBioMatch = strpos(strtolower($outlet['bio']), strtolower($query)) !== false;
 
-                if ($doesNameMatch || $doesBioMatch) {
-                    $isResult = true;
-                }
+                $isResult = $doesNameMatch || $doesBioMatch;
 
                 if (!$isResult) {
                     continue;
@@ -32,9 +30,7 @@ class SearchOutletsAction
                 foreach ($outlets as $o) {
                     $doesNameMatch = strpos(strtolower($outlet['name']), strtolower($o)) !== false;
 
-                    if ($doesNameMatch) {
-                        $isResult = true;
-                    }
+                    $isResult = $doesNameMatch;
                 }
 
                 if (!$isResult) {

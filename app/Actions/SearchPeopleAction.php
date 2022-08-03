@@ -18,9 +18,7 @@ class SearchPeopleAction
             if ($query) {
                 $doesNameMatch = strpos(strtolower($person['name']), strtolower($query)) !== false;
 
-                if ($doesNameMatch) {
-                    $isResult = true;
-                }
+                $isResult = $doesNameMatch;
 
                 if (!$isResult) {
                     continue;
@@ -31,9 +29,7 @@ class SearchPeopleAction
                 foreach ($outlets as $outlet) {
                     $worksAtOutlet = strpos(strtolower($person['position']), strtolower($outlet)) !== false;
 
-                    if ($worksAtOutlet) {
-                        $isResult = true;
-                    }
+                    $isResult = $worksAtOutlet;
                 }
 
                 if (!$isResult) {

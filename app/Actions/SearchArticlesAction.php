@@ -18,9 +18,7 @@ class SearchArticlesAction
             if ($query) {
                 $doesTitleMatch = strpos(strtolower($article['title']), strtolower($query)) !== false;
 
-                if ($doesTitleMatch) {
-                    $isResult = true;
-                }
+                $isResult = $doesTitleMatch;
 
                 if (!$isResult) {
                     continue;
@@ -31,9 +29,7 @@ class SearchArticlesAction
                 foreach ($outlets as $outlet) {
                     $doesOutletMatch = strpos(strtolower($article['outlet']), strtolower($outlet)) !== false;
 
-                    if ($doesOutletMatch) {
-                        $isResult = true;
-                    }
+                    $isResult = $doesOutletMatch;
                 }
 
                 if (!$isResult) {
