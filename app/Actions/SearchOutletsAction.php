@@ -6,7 +6,9 @@ class SearchOutletsAction
 {
     public function execute(
         ?string $query,
+        array $roles,
         array $outlets,
+        array $locations,
     ): array {
         $results = [];
 
@@ -26,6 +28,13 @@ class SearchOutletsAction
                 }
             }
 
+            if (count($roles) > 0) {
+                // For now, if anyone filters by role, don't show
+                // any outlets.
+
+                continue;
+            }
+
             if (count($outlets) > 0) {
                 foreach ($outlets as $o) {
                     $doesNameMatch = strpos(strtolower($outlet['name']), strtolower($o)) !== false;
@@ -38,9 +47,19 @@ class SearchOutletsAction
                 }
             }
 
-            if ($isResult) {
-                $results[] = $outlet;
+            if (count($locations) > 0) {
+                foreach ($locations as $location) {
+                    $isLocatedThere = strpos(strtolower($outlet['location']), strtolower($location)) !== false;
+
+                    $isResult = $isLocatedThere;
+                }
+
+                if (!$isResult) {
+                    continue;
+                }
             }
+
+            $results[] = $outlet;
         }
 
         return $results;

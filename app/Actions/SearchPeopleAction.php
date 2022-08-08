@@ -6,7 +6,9 @@ class SearchPeopleAction
 {
     public function execute(
         ?string $query,
+        array $roles,
         array $outlets,
+        array $locations,
     ): array {
         $results = [];
 
@@ -25,11 +27,35 @@ class SearchPeopleAction
                 }
             }
 
+            if (count($roles) > 0) {
+                foreach ($roles as $role) {
+                    $hasPosition = strpos(strtolower($person['position']), strtolower($role)) !== false;
+
+                    $isResult = $hasPosition;
+                }
+
+                if (!$isResult) {
+                    continue;
+                }
+            }
+
             if (count($outlets) > 0) {
                 foreach ($outlets as $outlet) {
                     $worksAtOutlet = strpos(strtolower($person['position']), strtolower($outlet)) !== false;
 
                     $isResult = $worksAtOutlet;
+                }
+
+                if (!$isResult) {
+                    continue;
+                }
+            }
+
+            if (count($locations) > 0) {
+                foreach ($locations as $location) {
+                    $isLocatedThere = strpos(strtolower($person['location']), strtolower($location)) !== false;
+
+                    $isResult = $isLocatedThere;
                 }
 
                 if (!$isResult) {

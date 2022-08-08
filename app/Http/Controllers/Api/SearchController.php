@@ -16,25 +16,35 @@ class SearchController extends Controller
     public function __invoke(Request $request)
     {
         $request->validate([
-            'query' => 'required_without:outlets',
-            'outlets' => 'required_without:query',
+            'query' => 'required_without_all:roles,outlets,locations',
+            'roles' => 'required_without_all:query,outlets,locations',
+            'outlets' => 'required_without_all:query,roles,locations',
+            'locations' => 'required_without_all:query,roles,outlets',
         ]);
 
+        $roles = $request->query('roles') ? explode(',', $request->query('roles')) : [];
         $outlets = $request->query('outlets') ? explode(',', $request->query('outlets')) : [];
+        $locations = $request->query('locations') ? explode(',', $request->query('locations')) : [];
 
         $people = (new SearchPeopleAction())->execute(
             $request->query('query'),
+            $roles,
             $outlets,
+            $locations,
         );
 
         $articles = (new SearchArticlesAction())->execute(
             $request->query('query'),
+            $roles,
             $outlets,
+            $locations,
         );
 
         $outlets = (new SearchOutletsAction())->execute(
             $request->query('query'),
+            $roles,
             $outlets,
+            $locations,
         );
 
         return [

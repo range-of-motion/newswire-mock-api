@@ -6,7 +6,9 @@ class SearchArticlesAction
 {
     public function execute(
         ?string $query,
+        array $roles,
         array $outlets,
+        array $locations,
     ): array {
         $results = [];
 
@@ -25,6 +27,13 @@ class SearchArticlesAction
                 }
             }
 
+            if (count($roles) > 0) {
+                // For now, if anyone filters by role, don't show
+                // any articles.
+
+                continue;
+            }
+
             if (count($outlets) > 0) {
                 foreach ($outlets as $outlet) {
                     $doesOutletMatch = strpos(strtolower($article['outlet']), strtolower($outlet)) !== false;
@@ -35,6 +44,13 @@ class SearchArticlesAction
                 if (!$isResult) {
                     continue;
                 }
+            }
+
+            if (count($locations) > 0) {
+                // For now, if anyone filters by location, don't show
+                // any articles.
+
+                continue;
             }
 
             $results[] = $article;
