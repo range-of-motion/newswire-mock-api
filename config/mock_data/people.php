@@ -3,73 +3,271 @@
 return [
     [
         'name' => 'Ayana Hibbert',
-        'position' => 'Staff writer, Nerdwallet',
-        'location' => 'Texas, USA',
-        'beats' => ['Personal & family finances', 'Cryptocurrency'],
-    ], [
-        'name' => 'Rianne Sadler',
-        'position' => 'Reporter, MSNBC Online',
-        'location' => null,
-        'beats' => [],
-    ], [
-        'name' => 'Rebecca Ramsey',
-        'position' => 'Editor, Time',
-        'location' => 'Michigan, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Arnie Fraser',
-        'position' => 'Editor, Forbes',
-        'location' => 'Oakland, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Alanna Lester',
-        'position' => 'Reporter, CNN',
-        'location' => 'Cincinnati, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Jude Burns',
-        'position' => 'Director, ABC News',
-        'location' => 'Durham, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Arla Barton',
-        'position' => 'Analyst, CNN',
-        'location' => 'Tucson, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Ilyas Cassidy',
-        'position' => 'Administrator, CNN',
-        'location' => 'Jacksonville, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Hussain Velez',
-        'position' => 'Blogger, Forbes',
-        'location' => 'Cleveland, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Marissa Lyons',
-        'position' => 'Reporter, CBS News',
-        'location' => 'Indianapolis, USA',
-        'beats' => [],
-    ], [
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2020/06/aiony-haust-3TLl_97HNJo-300x300.jpg',
+        'position' => 'Reporter, ABC News',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'ahibbert',
+                'followers' => '22.4k',
+                'tweets' => '1.2k',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
         'name' => 'Tia Delarosa',
-        'position' => 'Reporter, CBS News',
-        'location' => 'Montgomery, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Richard Talley',
-        'position' => 'Director, MSNBC',
-        'location' => 'Washington, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Roosevelt Humphries',
-        'position' => 'Director, Bloomberg',
-        'location' => 'Portland, USA',
-        'beats' => [],
-    ], [
-        'name' => 'Nisha Gillespie',
-        'position' => 'Reporter, ESPN Online',
-        'location' => 'Kansas City, USA',
-        'beats' => [],
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/09/jason-blackeye-223584-300x300.jpg',
+        'position' => 'Director, CBS News',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'tdelarosa',
+                'followers' => '3k',
+                'tweets' => '684',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Hussain Velez',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/07/pexels-photo-26939-1-300x300.jpg',
+        'position' => 'Analyst, CNN',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'hvelez',
+                'followers' => '212',
+                'tweets' => '1.3k',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Adam Riley',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/09/bewakoof-com-official-245573-300x300.jpg',
+        'position' => 'Reporter, Fox News',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'ariley',
+                'followers' => '1.3k',
+                'tweets' => '4.9k',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Reece Martin',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/07/tierra-benton-197817-300x300.jpg',
+        'position' => 'Analyst, MSNBC',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'rmartin',
+                'followers' => '402',
+                'tweets' => '28',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Leah Morgan',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/06/pexels-photo-195825-300x300.jpeg',
+        'position' => 'Director, NBC News',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'lmorgan',
+                'followers' => '942',
+                'tweets' => '1.1k',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Christian Travis',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/07/tamarcus-brown-266128-300x300.jpg',
+        'position' => 'Reporter, The New York Times',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'ctravis',
+                'followers' => '942',
+                'tweets' => '1.1k',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Edith Boyle',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/07/christian-acosta-195215-300x300.jpg',
+        'position' => 'Reporter, USA Today',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'eboyle',
+                'followers' => '28',
+                'tweets' => '409',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Max Turner',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2020/05/imansyah-muhamad-putera-n4KewLKFOZw-300x300.jpg',
+        'position' => 'Reporter, The Wall Street Journal',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'mturner',
+                'followers' => '833',
+                'tweets' => '74',
+            ],
+        ],
+
+        'notes' => [],
+    ],
+
+    [
+        'name' => 'Danica Gutierrez',
+        'avatar_url' => 'https://userstock.io/data/wp-content/uploads/2017/07/pexels-photo-325531-300x300.jpg',
+        'position' => 'Reporter, The Washington Post',
+        'location' => 'New York, USA',
+
+        'contact_methods' => [
+            'emails' => [],
+            'phones' => [],
+        ],
+
+        'beats' => [
+            'Personal & family finances',
+            'Cryptocurrency',
+        ],
+
+        'socials' => [
+            'twitter' => [
+                'handle' => 'dguetierrez',
+                'followers' => '5.2k',
+                'tweets' => '703',
+            ],
+        ],
+
+        'notes' => [],
     ],
 ];

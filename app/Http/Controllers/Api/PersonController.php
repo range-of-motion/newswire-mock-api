@@ -16,6 +16,11 @@ class PersonController extends Controller
             abort(404);
         }
 
+        // Find and attach articles written by person
+        $person['articles'] = array_filter(config('mock_data.articles'), function ($article) use ($person) {
+            return $article['author'] === $person['name'];
+        });
+
         $model = (new GeneratePersonModelAction())->execute($person, $id);
 
         return $model;
