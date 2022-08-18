@@ -7,16 +7,6 @@ return [
         'position' => 'Reporter, ABC News',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'ahibbert',
@@ -24,8 +14,6 @@ return [
                 'tweets' => '1.2k',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -34,16 +22,6 @@ return [
         'position' => 'Director, CBS News',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'tdelarosa',
@@ -51,8 +29,6 @@ return [
                 'tweets' => '684',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -61,16 +37,6 @@ return [
         'position' => 'Analyst, CNN',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'hvelez',
@@ -78,8 +44,6 @@ return [
                 'tweets' => '1.3k',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -88,16 +52,6 @@ return [
         'position' => 'Reporter, Fox News',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'ariley',
@@ -105,8 +59,6 @@ return [
                 'tweets' => '4.9k',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -115,16 +67,6 @@ return [
         'position' => 'Analyst, MSNBC',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'rmartin',
@@ -132,8 +74,6 @@ return [
                 'tweets' => '28',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -142,16 +82,6 @@ return [
         'position' => 'Director, NBC News',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'lmorgan',
@@ -159,8 +89,6 @@ return [
                 'tweets' => '1.1k',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -169,16 +97,6 @@ return [
         'position' => 'Reporter, The New York Times',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'ctravis',
@@ -186,8 +104,6 @@ return [
                 'tweets' => '1.1k',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -196,16 +112,6 @@ return [
         'position' => 'Reporter, USA Today',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'eboyle',
@@ -213,8 +119,6 @@ return [
                 'tweets' => '409',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -223,16 +127,6 @@ return [
         'position' => 'Reporter, The Wall Street Journal',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'mturner',
@@ -240,8 +134,6 @@ return [
                 'tweets' => '74',
             ],
         ],
-
-        'notes' => [],
     ],
 
     [
@@ -250,16 +142,6 @@ return [
         'position' => 'Reporter, The Washington Post',
         'location' => 'New York, USA',
 
-        'contact_methods' => [
-            'emails' => [],
-            'phones' => [],
-        ],
-
-        'beats' => [
-            'Personal & family finances',
-            'Cryptocurrency',
-        ],
-
         'socials' => [
             'twitter' => [
                 'handle' => 'dguetierrez',
@@ -267,7 +149,5 @@ return [
                 'tweets' => '703',
             ],
         ],
-
-        'notes' => [],
     ],
 ];

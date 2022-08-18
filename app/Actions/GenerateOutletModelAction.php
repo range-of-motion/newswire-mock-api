@@ -32,7 +32,7 @@ class GenerateOutletModelAction
             'Online',
         ];
 
-        $data['contact_information'] = [
+        $data['contact_methods'] = [
             'emails' => ['replace_me@gmail.com'],
             'phones' => ['+31612345678'],
             'websites' => ['https://replace-me.com'],
