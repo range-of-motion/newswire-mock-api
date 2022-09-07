@@ -11,6 +11,49 @@ use App\Actions\SearchPeopleAction;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+/**
+ * @OA\Get(
+ *     path="/api/search",
+ *
+ *     @OA\Parameter(
+ *       name="query",
+ *       in="query",
+ *       required=false,
+ *       @OA\Schema(type="string")
+ *     ),
+ *
+ *     @OA\Parameter(
+ *       name="roles",
+ *       in="query",
+ *       required=false,
+ *       @OA\Schema(type="string")
+ *     ),
+ *
+ *     @OA\Parameter(
+ *       name="outlets",
+ *       in="query",
+ *       required=false,
+ *       @OA\Schema(type="string")
+ *     ),
+ *
+ *     @OA\Parameter(
+ *       name="locations",
+ *       in="query",
+ *       required=false,
+ *       @OA\Schema(type="string")
+ *     ),
+ *
+ *     @OA\Response(
+ *         response="200",
+ *         description="OK"
+ *     ),
+ *
+ *     @OA\Response(
+ *         response="422",
+ *         description="Unprocessable Entity"
+ *     )
+ * )
+ */
 class SearchController extends Controller
 {
     public function __invoke(Request $request)
