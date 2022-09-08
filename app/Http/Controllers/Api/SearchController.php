@@ -78,8 +78,14 @@ class SearchController extends Controller
      *   )
      * )
      */
-    public function save(Search $search)
+    public function save(int $id)
     {
+        $search = Search::find($id);
+
+        if (!$search) {
+            abort(404);
+        }
+
         $search->update([
             'saved' => true,
         ]);
