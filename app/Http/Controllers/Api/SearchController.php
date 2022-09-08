@@ -9,6 +9,7 @@ use App\Actions\SearchArticlesAction;
 use App\Actions\SearchOutletsAction;
 use App\Actions\SearchPeopleAction;
 use App\Http\Controllers\Controller;
+use App\Models\Search;
 use Illuminate\Http\Request;
 
 /**
@@ -63,6 +64,10 @@ class SearchController extends Controller
             'roles' => 'required_without_all:query,outlets,locations',
             'outlets' => 'required_without_all:query,roles,locations',
             'locations' => 'required_without_all:query,roles,outlets',
+        ]);
+
+        Search::create([
+            'query' => $request->getQueryString(),
         ]);
 
         $roles = $request->query('roles') ? explode(',', $request->query('roles')) : [];
