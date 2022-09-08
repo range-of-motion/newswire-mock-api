@@ -60,4 +60,30 @@ class SearchController extends Controller
             ];
         });
     }
+
+    /**
+     * @OA\Post(
+     *   path="/api/searches/{id}/save",
+     *
+     *  @OA\Parameter(
+     *      name="id",
+     *      in="path",
+     *      required=true,
+     *      @OA\Schema(type="integer")
+     *  ),
+     *
+     *   @OA\Response(
+     *     response="200",
+     *     description="OK"
+     *   )
+     * )
+     */
+    public function save(Search $search)
+    {
+        $search->update([
+            'saved' => true,
+        ]);
+
+        return [];
+    }
 }

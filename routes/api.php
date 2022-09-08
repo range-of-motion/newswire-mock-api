@@ -30,6 +30,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/search', PerformSearchController::class);
 Route::get('/searches/recent', [SearchController::class, 'recent']);
 Route::get('/searches/saved', [SearchController::class, 'saved']);
+Route::post('/searches/{id}/save', [SearchController::class, 'save']);
 
 Route::get('/people/{id}', [PersonController::class, 'show']);
 
