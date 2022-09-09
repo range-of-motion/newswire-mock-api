@@ -36,7 +36,7 @@ class SearchArticlesAction
 
             if (count($outlets) > 0) {
                 foreach ($outlets as $outlet) {
-                    $doesOutletMatch = strpos(strtolower($article['outlet']), strtolower($outlet)) !== false;
+                    $doesOutletMatch = strpos(strtolower($article['outlet']['name']), strtolower($outlet)) !== false;
 
                     $isResult = $doesOutletMatch;
                 }
