@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Actions\GenerateOutletModelAction;
 use App\Http\Controllers\Controller;
+use App\Models\Outlet;
 use Illuminate\Http\Request;
 
 /**
@@ -30,16 +30,8 @@ use Illuminate\Http\Request;
  */
 class OutletController extends Controller
 {
-    public function show(Request $request, int $id)
+    public function show(Outlet $outlet)
     {
-        $outlet = config('mock_data.outlets')[$id - 1] ?? null;
-
-        if (!$outlet) {
-            abort(404);
-        }
-
-        $model = (new GenerateOutletModelAction())->execute($outlet, $id);
-
-        return $model;
+        return $outlet;
     }
 }

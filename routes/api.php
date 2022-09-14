@@ -32,11 +32,11 @@ Route::get('/searches/recent', [SearchController::class, 'recent']);
 Route::get('/searches/saved', [SearchController::class, 'saved']);
 Route::post('/searches/{id}/save', [SearchController::class, 'save']);
 
-Route::get('/people/{id}', [PersonController::class, 'show']);
+Route::get('/people/{person}', [PersonController::class, 'show']);
 
-Route::get('/articles/{id}', [ArticleController::class, 'show']);
+Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
-Route::get('/outlets/{id}', [OutletController::class, 'show']);
+Route::get('/outlets/{outlet}', [OutletController::class, 'show']);
 
 Route::get('/popular-media-types', [PopularMediaTypeController::class, 'index']);
 Route::get('/popular-outlets', [PopularOutletController::class, 'index']);

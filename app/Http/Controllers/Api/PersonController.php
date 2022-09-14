@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Actions\GeneratePersonModelAction;
 use App\Http\Controllers\Controller;
+use App\Models\Person;
 use Illuminate\Http\Request;
 
 /**
@@ -30,16 +30,8 @@ use Illuminate\Http\Request;
  */
 class PersonController extends Controller
 {
-    public function show(Request $request, int $id)
+    public function show(Person $person)
     {
-        $person = config('mock_data.people')[$id - 1] ?? null;
-
-        if (!$person) {
-            abort(404);
-        }
-
-        $model = (new GeneratePersonModelAction())->execute($person, $id);
-
-        return $model;
+        return $person;
     }
 }

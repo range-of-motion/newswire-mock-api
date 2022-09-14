@@ -2,6 +2,8 @@
 
 namespace App\Actions;
 
+use App\Models\Outlet;
+
 class SearchOutletsAction
 {
     public function execute(
@@ -10,58 +12,38 @@ class SearchOutletsAction
         array $outlets,
         array $locations,
     ): array {
-        $results = [];
+        $builder = Outlet::query();
 
-        foreach (config('mock_data.outlets') as $i => $outlet) {
-            $isResult = false;
-
-            $outlet = (new GenerateOutletModelAction())->execute($outlet, $i + 1);
-
-            if ($query) {
-                $doesNameMatch = strpos(strtolower($outlet['name']), strtolower($query)) !== false;
-                $doesBioMatch = strpos(strtolower($outlet['bio']), strtolower($query)) !== false;
-
-                $isResult = $doesNameMatch || $doesBioMatch;
-
-                if (!$isResult) {
-                    continue;
-                }
-            }
-
-            if (count($roles) > 0) {
-                // For now, if anyone filters by role, don't show
-                // any outlets.
-
-                continue;
-            }
-
-            if (count($outlets) > 0) {
-                foreach ($outlets as $o) {
-                    $doesNameMatch = strpos(strtolower($outlet['name']), strtolower($o)) !== false;
-
-                    $isResult = $doesNameMatch;
-                }
-
-                if (!$isResult) {
-                    continue;
-                }
-            }
-
-            if (count($locations) > 0) {
-                foreach ($locations as $location) {
-                    $isLocatedThere = strpos(strtolower($outlet['location']), strtolower($location)) !== false;
-
-                    $isResult = $isLocatedThere;
-                }
-
-                if (!$isResult) {
-                    continue;
-                }
-            }
-
-            $results[] = $outlet;
+        if ($query) {
+            $builder->whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($query) . '%']);
+                // ->orWhereRaw('LOWER(bio) LIKE ?', ['%' . strtolower($query) . '%']); // Not yet in use because bio isn't stored in database yet
         }
 
-        return $results;
+        if (count($roles) > 0) {
+            // For now, if anyone filters by role, don't show
+            // any outlets.
+
+            return [];
+        }
+
+        if (count($outlets) > 0) {
+            $builder->where(function ($builder) use ($outlets) {
+                foreach ($outlets as $outlet) {
+                    $builder->orWhereRaw('LOWER(name) = ?', [strtolower($outlet)]);
+                }
+            });
+        }
+
+        if (count($locations) > 0) {
+            $builder->where(function ($builder) use ($locations) {
+                foreach ($locations as $location) {
+                    $builder->orWhereRaw('LOWER(location) = ?', [strtolower($location)]);
+                }
+            });
+        }
+
+        $outlets = $builder->get()->toArray();
+
+        return $outlets;
     }
 }
