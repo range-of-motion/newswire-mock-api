@@ -12,7 +12,8 @@ class SearchOutletsAction
         array $outlets,
         array $locations,
     ): array {
-        $builder = Outlet::query();
+        $builder = Outlet::query()
+            ->with(['articles.author', 'articles.outlet']);
 
         if ($query) {
             $builder->whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($query) . '%']);

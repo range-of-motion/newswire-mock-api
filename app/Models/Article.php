@@ -30,6 +30,11 @@ class Article extends Model
      * Relationships
      */
 
+    public function author()
+    {
+        return $this->belongsTo(Person::class);
+    }
+
     public function outlet()
     {
         return $this->belongsTo(Outlet::class);

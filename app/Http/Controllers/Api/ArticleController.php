@@ -32,6 +32,11 @@ class ArticleController extends Controller
 {
     public function show(Article $article)
     {
+        $article->load([
+            'author',
+            'outlet',
+        ]);
+
         return $article;
     }
 }

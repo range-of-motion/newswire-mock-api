@@ -32,6 +32,11 @@ class PersonController extends Controller
 {
     public function show(Person $person)
     {
+        $person->load([
+            'articles.author',
+            'articles.outlet',
+        ]);
+
         return $person;
     }
 }

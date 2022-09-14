@@ -12,7 +12,9 @@ class SearchArticlesAction
         array $outlets,
         array $locations,
     ): array {
-        $builder = Article::query();
+        $builder = Article::query()
+            ->with('author')
+            ->with('outlet');
 
         if ($query) {
             $builder->whereRaw('LOWER(title) LIKE ?', ['%' . strtolower($query) . '%']);

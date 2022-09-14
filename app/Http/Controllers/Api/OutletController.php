@@ -32,6 +32,11 @@ class OutletController extends Controller
 {
     public function show(Outlet $outlet)
     {
+        $outlet->load([
+            'articles.author',
+            'articles.outlet',
+        ]);
+
         return $outlet;
     }
 }

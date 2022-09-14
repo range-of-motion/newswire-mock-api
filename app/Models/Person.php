@@ -63,4 +63,13 @@ class Person extends Model
             'addresses' => ['499 Replace Me'],
         ];
     }
+
+    /**
+     * Relationships
+     */
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class, 'author_id');
+    }
 }

@@ -12,7 +12,8 @@ class SearchPeopleAction
         array $outlets,
         array $locations,
     ): array {
-        $builder = Person::query();
+        $builder = Person::query()
+            ->with(['articles.author', 'articles.outlet']);
 
         if ($query) {
             $builder->whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($query) . '%']);
