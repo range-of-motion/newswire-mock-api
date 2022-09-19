@@ -87,7 +87,7 @@ class GenerateFakeData extends Command
 
             Person::create([
                 'name' => fake()->firstName . ' ' . fake()->lastName,
-                'avatar_url' => 'https://faces-img.xcdn.link/image-lorem-face-' . $i . '.jpg',
+                'avatar_url' => 'https://picsum.photos/256',
                 'position' => fake()->randomElement($positions) . ', ' . $outlet->name,
                 'location' => fake()->randomElement($locations),
                 'socials' => '{}',
@@ -111,10 +111,22 @@ class GenerateFakeData extends Command
                 ->where('name', $positionParts[1])
                 ->first();
 
+            $title = fake('en_US')->realText(80);
+
+            // 50/50 chance that the word "iPhone" appears in title
+            if (rand(0, 1) === 1) {
+                $titleParts = explode(' ', $title);
+
+                $randomInsertionIndex = rand(0, count($titleParts));
+                $titleParts[$randomInsertionIndex] = 'iPhone';
+
+                $title = implode(' ', $titleParts);
+            }
+
             Article::create([
                 'author_id' => $author->id,
                 'outlet_id' => $outlet->id,
-                'title' => fake('en_US')->realText(80),
+                'title' => $title,
                 'url' => 'https://longform.org/random',
             ]);
         }
